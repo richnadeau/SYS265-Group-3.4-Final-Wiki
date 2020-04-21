@@ -1,0 +1,16 @@
+[linux]
+util-sys
+dhcp1-sys
+dhcp2-sys
+[fw]
+fw-sys
+[windows]
+mgmt1-sys
+dc1-sys
+dc2-sys
+[windows:vars]
+ansible_user=rich.nadeau-adm@sys.local
+ansible_connection=winrm
+ansible_winrm_server_cert_validation=ignore
+ansible_winrm_transport=ntlm
+ansible_winrm_port=5986
