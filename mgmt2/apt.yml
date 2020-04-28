@@ -1,0 +1,12 @@
+- name: Install Packages with Apt
+  hosts: docker1-sys
+  remote_user: deployer
+  become: true
+  become_user: root
+  tasks:
+          - name: Installing tree
+            apt:
+                name: tree
+                state: present
+                force_apt_get: yes
+                update_cache: true
