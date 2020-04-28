@@ -1,0 +1,11 @@
+- name: Install Packages with Yum
+  hosts: util-sys
+  remote_user: deployer
+  become: true
+  become_user: root
+  tasks:
+          - name: Installing tree
+            yum:
+                name: tree
+                state: present
+                update_cache: true
