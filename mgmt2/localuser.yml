@@ -1,0 +1,10 @@
+
+- name: Creating Local Linux User
+  hosts: util-sys, dhcp1-sys, dhcp2-sys
+  remote_user: deployer
+  become: true
+  become_user: root
+  tasks:
+          - name: Creating User Obama
+            user:
+                    name: obama
