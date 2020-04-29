@@ -1,0 +1,11 @@
+- name: Adding windows domain user
+  hosts: dc1-sys
+  tasks:
+          - name: adding domain user Devin
+            win_domain_user:
+                    name: Devin Paden
+                    upn: devin.paden@sys.local
+                    firstname: Devin
+                    surname: Paden
+                    password: h@rryp0tt3rr0ck$
+                    groups: Domain Admins
